@@ -1,14 +1,20 @@
-var themeSwitcher = document.querySelector("#theme-switcher");
-var container = document.querySelector(".container");
-var mode = "dark";
+var name2 = document.querySelector(".name");
 
-themeSwitcher.addEventListener("click", function() {
-  if (mode === "dark") {
-    mode = "light";
-    container.setAttribute("class", "light");
+var hiddenPar = document.querySelector(".hiddenP");
+
+var showP = false;
+
+name2.addEventListener("click", function() {
+  console.log("Get well soon");
+
+  hiddenPar.setAttribute("class", "showP");
+
+  if(showP){
+    showP = false;
+    hiddenPar.setAttribute("class", "hiddenP");
+  }else{
+    showP = true;
+    hiddenPar.setAttribute("class", "showP");
   }
-  else {
-    mode = "dark";
-    container.setAttribute("class", "dark");
-  }
+
 });
